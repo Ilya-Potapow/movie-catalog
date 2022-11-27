@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Movielog</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=DM+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css" />
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+
+	<header>
+
+		<div class="container header-container">
+
+			<!-- top header -->
+			<div class="header-section">
+
+				<div class="home-page">
+					<a href="" class="home-page-link" title="Home"><img src="./img/main-logo.svg"
+							alt="Home page">Movie Catalog</a>
+				</div>
+
+
+				<form class="search-form" action="">
+					<input class="search-input" type="text" placeholder="What do you want to watch?">
+					<button class="search-btn" type="submit"><img src="./img/search-ico.svg" alt=""></button>
+				</form>
+
+
+				<button class="watchlist-btn" title="My movies">My movies<img src="./img/bookmark.svg" alt=""></button>
+
+			</div>
+
+			<div class="header-description">
+				<h2 class="header-title">John Wick 3 : Parabellum</h2>
+
+				<div class="rates rates--header">
+
+					<div class="imdb-rate">
+						<div class="rate-nubers">
+							<img src="./img/imdb.svg" alt="IMDb rate">
+							<span>8.6 / 10</span>
+						</div>
+					</div>
+
+					<div class="tomato-rate">
+						<div class="rate-nubers">
+							<img src="./img/rotten-tomato.svg" alt="Rottem tomato rate">
+							<span class="rate-count">97%</span>
+						</div>
+					</div>
+
+				</div>
+
+				<p class="header-text">
+					After gunning down a member of the High Table the shadowy international assassin's guild legendary
+					hit man John Wick finds himself stripped of the organization's protective services. Now
+					stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York
+					as he becomes the target of the world's most ruthless killers.
+				</p>
+
+				<!-- bot header -->
+
+			</div>
+
+			<div class="header-section header-section--bot">
+
+				<div class="buttons-group">
+					<button class="top btn-active">Top <img src="./img/star.svg" alt=""></button>
+					<button class="popular">Popular <img src="./img/fire.svg" alt=""></button>
+					<button class="await">Await <img src="./img/moon.svg" alt=""></button>
+				</div>
+
+			</div>
+
+		</div>
+		
+	</header>
+
+	<main>
+
+		<div class="container">
+
+			<div class="pages-info">
+
+				<form class="pagination-form" action="">
+
+					<input class="page-select" type="number" name="page-select">
+					<button class="page-submit-btn btn-disable" type="submit"></button>
+
+				</form>
+
+				<div class="pages-data">
+
+					<img src="./img/pages-amount.svg" alt="">
+					<span class="current-page"></span>
+					<span class="separator">/</span>
+					<span class="total-pages"></span>
+
+				</div>
+
+			</div>
+
+			<div class="movies-holder">
+
+				<!-- Card -->
+
+				<!-- <div class="movie-card">
+
+					<div class="will-watch">
+						<button type="button"><img src="./img/eye.svg" alt=""></button>
+					</div>
+
+					<div class="movie-rate">
+
+						<span class="rate green">9.1</span>
+					</div>
+
+					<div class="movie-img">
+						<img src="https://kinopoiskapiunofficial.tech/images/posters/kp/435.jpg" alt="Зеленая миля">
+					</div>
+
+					<div class="year-country">
+						<span class="country">USA ,</span>
+						<span class="year">1999</span>
+					</div>
+
+					<h4 class="movie-title">Зеленая Миля</h4>
+
+					<div class="movie-desc">
+						<p>
+							Хакер Нео узнает, что его мир — виртуальный. Выдающийся экшен, доказавший, что зрелищное
+							кино может быть умным
+
+						</p>
+
+
+					</div>
+
+					<div class="movie-info">
+
+
+						<div class="movie-genres">
+							<span class="genre">история</span>
+							<span class="genre">биография</span>
+							<span class="genre">военный</span>
+							<span class="genre">драма</span>
+						</div>
+
+					</div>
+
+				</div> -->
+
+				<!-- Card -->
+
+			</div>
+
+			<div class="pagination">
+				<ul class="list">
+					<li class="prev">&laquo;</li>
+
+					<li class="next">&raquo;</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
