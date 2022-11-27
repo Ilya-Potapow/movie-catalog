@@ -8,4 +8,4 @@
 
 For the API to work correctly, use vpn ✌
 
-# [Link](ilya-potapow.github.io/movie-catalog/)
+# [Link](https://ilya-potapow.github.io/movie-catalog/)
