@@ -37,7 +37,7 @@ let currentURL = API_URL_TOP250;
 
 
 if (localStorage.getItem('movies')) {
-    
+
     myMovies = JSON.parse(localStorage.getItem('movies'));
 }
 getMovies(currentURL + pageCounter);
@@ -70,11 +70,13 @@ async function getMovies(url) {
     const responseData = await response.json();
 
 
+
     renderMovies(responseData);
     checkLastPage(responseData);
     checkAmountPages(responseData);
     checkSearch(responseData);
 
+    checkCorrectBtnClass();
 
     // console.log(responseData);
 };
@@ -247,40 +249,34 @@ async function checkButtons(e) {
     const btnActive = e.target.classList.contains('btn-active');
 
     if (btnTop && btnActive == false) {
+        await getURLBySection(API_URL_TOP250, e);
         btnTopEl.classList.add('btn-active');
         btnPopularEl.classList.remove('btn-active');
         btnAwaitEl.classList.remove('btn-active');
-        await getURLBySection(API_URL_TOP250, e);
     }
     else if (btnPopular && btnActive == false) {
+        await getURLBySection(API_URL_POPULAR, e);
         btnTopEl.classList.remove('btn-active');
         btnPopularEl.classList.add('btn-active');
         btnAwaitEl.classList.remove('btn-active');
-        await getURLBySection(API_URL_POPULAR, e);
     }
     else if (btnAwait && btnActive == false) {
+        await getURLBySection(API_URL_AWAIT, e);
         btnTopEl.classList.remove('btn-active');
         btnPopularEl.classList.remove('btn-active');
         btnAwaitEl.classList.add('btn-active');
-        await getURLBySection(API_URL_AWAIT, e);
     };
 
 };
 
 function checkCorrectBtnClass() {
     if (currentURL == API_URL_TOP250) {
-        console.log('top');
+        btnTopEl.classList.add('btn-active');
     } else if (currentURL == API_URL_AWAIT) {
-        console.log('await');
+        btnAwaitEl.classList.add('btn-active');
     } else if (currentURL == API_URL_POPULAR) {
-        console.log('pop');
-    } else {
-        console.log('??');
-        console.log(currentURL);
-    }
-    API_URL_TOP250
-    API_URL_AWAIT
-    API_URL_POPULAR
+        btnPopularEl.classList.add('btn-active');
+    };
 }
 
 
@@ -315,6 +311,7 @@ function getPageNumber(e) {
     paginationCheck();
     showPageNumber();
     getMovies(currentURL + chosenPage);
+
 
     // console.log('getPageNumber START');
     // console.log('Select value :', pageSelectEl.value);
@@ -416,7 +413,7 @@ function search(e) {
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 function checkSearch(data) {
     if (data.films < 1) {
-        watchlistBtn.classList.add('btn-active');
+        // watchlistBtn.classList.add('btn-active');
 
         paginationEL.classList.remove('hide');
         pagiFormEL.classList.remove('hide')
