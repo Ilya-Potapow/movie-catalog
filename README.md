@@ -6,6 +6,6 @@
 - the collection is saved in local storage;
 - search movies by keyword;
 
-For the API to work correctly, use vpn ✌
+For the API to work correctly - use vpn ✌
 
 # [Link](https://ilya-potapow.github.io/movie-catalog/)
