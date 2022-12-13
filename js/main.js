@@ -439,7 +439,7 @@ function showNotifyRED() {
     new Notify({
         status: 'error',
         title: '',
-        text: 'Movie removed 😤',
+        text: 'Movie removed',
         effect: 'slide',
         speed: 200,
         customClass: '',
@@ -458,7 +458,7 @@ function showNotifyORANGE() {
     new Notify({
         status: 'warning',
         title: '',
-        text: 'Movie already added 🐖💨',
+        text: 'Movie already added',
         effect: 'slide',
         speed: 200,
         customClass: '',
@@ -477,7 +477,7 @@ function showNotifyGREEN() {
     new Notify({
         status: 'success',
         title: '',
-        text: 'Movie added 👌',
+        text: 'Movie added',
         effect: 'slide',
         speed: 200,
         customClass: '',
