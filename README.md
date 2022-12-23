@@ -5,6 +5,7 @@
 - can add movies to the collection;
 - collection is saved in local storage;
 - search movies by keyword;
+- working on responsive layout..
 
 For the API to work correctly - use vpn ✌
 
